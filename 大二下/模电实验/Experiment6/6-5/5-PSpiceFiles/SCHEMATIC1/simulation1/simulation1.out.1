@@ -1,0 +1,48 @@
+
+**** 05/16/21 14:16:35 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulation1"  [ D:\EXPERIMENT6\6-5\5-PSpiceFiles\SCHEMATIC1\simulation1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulation1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Cadence\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 0.2s 0 0.1ms 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 5
+V_V3         0 -15V 15Vdc
+R_R3         N05948 N06018  10k TC=0,0 
+X_U1         N06018 N06290 +15V -15V N05846 LM741
+R_R2         N06290 N05846  10k TC=0,0 
+V_V2         +15V 0 15Vdc
+V_V5         N05948 0  
++SIN 0 0.3 50 0 0 0
+R_R4         0 N05846  50 TC=0,0 
+V_V6         N05948 0 1Vdc
+
+**** RESUMING simulation1.cir ****
+.END
+
+ERROR(ORPSIM-15143): Voltage source and/or inductor loop involving V_V6. You may break the loop by adding a series resistance
+

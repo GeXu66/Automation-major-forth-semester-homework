@@ -1,0 +1,17 @@
+.ALIASES
+X_U1            U1(+=N05583 -=0 V+=+15V V-=-15V OUT=N055354 ) CN @7-4.SCHEMATIC1(sch_1):INS5515@OPAMP.LM741.Normal(chips)
+D_D4            D4(1=N05627 2=N056891 ) CN @7-4.SCHEMATIC1(sch_1):INS5701@DIODE.D1N4734.Normal(chips)
+R_R3            R3(1=N05583 2=N05627 ) CN @7-4.SCHEMATIC1(sch_1):INS5605@ANALOG.R.Normal(chips)
+V_V3            V3(+=0 -=-15V ) CN @7-4.SCHEMATIC1(sch_1):INS5455@SOURCE.VDC.Normal(chips)
+D_D3            D3(1=0 2=N056891 ) CN @7-4.SCHEMATIC1(sch_1):INS5679@DIODE.D1N4734.Normal(chips)
+C_C1            C1(1=N05769 2=N05851 ) CN @7-4.SCHEMATIC1(sch_1):INS5885@ANALOG.C.Normal(chips)
+X_U2            U2(+=0 -=N05769 V+=+15V V-=-15V OUT=N05851 ) CN @7-4.SCHEMATIC1(sch_1):INS5729@OPAMP.LM741.Normal(chips)
+R_R1            R1(1=N055354 2=N05627 ) CN @7-4.SCHEMATIC1(sch_1):INS5585@ANALOG.R.Normal(chips)
+V_V2            V2(+=+15V -=0 ) CN @7-4.SCHEMATIC1(sch_1):INS5423@SOURCE.VDC.Normal(chips)
+R_R5            R5(1=N05583 2=N05851 ) CN @7-4.SCHEMATIC1(sch_1):INS5829@ANALOG.R.Normal(chips)
+D_D5            D5(1=N05627 2=N05769 ) CN @7-4.SCHEMATIC1(sch_1):INS5994@DIODE.D1N4007.Normal(chips)
+R_R6            R6(1=N06152 2=N05769 ) CN @7-4.SCHEMATIC1(sch_1):INS6076@ANALOG.R.Normal(chips)
+R_R7            R7(1=-15V 2=N06152 ) CN @7-4.SCHEMATIC1(sch_1):INS6103@ANALOG.R.Normal(chips)
+_    _(+15V=+15V)
+_    _(-15V=-15V)
+.ENDALIASES

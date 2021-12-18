@@ -1,0 +1,9 @@
+* source 9
+X_U1         N09604 N09494 +15V -15V N09500 LM741
+V_V2         +15V 0 15Vdc
+V_V3         0 -15V 15Vdc
+R_R1         N09933 N09604  1k TC=0,0 
+V_V5         N09494 0  
++PULSE -5 5 0.1ms 0.5ms 0.5ms 0 1ms
+R_R2         N09604 N09500  10k TC=0,0 
+V_V6         N09933 0 0Vdc

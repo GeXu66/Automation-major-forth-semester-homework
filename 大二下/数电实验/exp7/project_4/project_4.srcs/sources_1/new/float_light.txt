@@ -1,0 +1,65 @@
+`timescale 1ns / 1ps
+//////////////////////////////////////////////////////////////////////////////////
+// Company: 
+// Engineer: 
+// 
+// Create Date: 2021/05/25 12:27:13
+// Design Name: 
+// Module Name: float_light
+// Project Name: 
+// Target Devices: 
+// Tool Versions: 
+// Description: 
+// 
+// Dependencies: 
+// 
+// Revision:
+// Revision 0.01 - File Created
+// Additional Comments:
+// 
+//////////////////////////////////////////////////////////////////////////////////
+
+
+module float_light(
+    input clk,
+    input enable,
+    output [3:0]outseg
+    );
+    reg[26:0] divclk;
+    reg[3:0] counter;
+    reg[3:0] light_state;
+    always@(posedge clk)
+    begin
+        if(divclk<100000000-1)
+            divclk<=divclk+1;
+        else
+        begin
+            divclk<=0;
+            if(enable)
+            begin
+                if(counter<11)
+                    counter <= counter+1;
+                else
+                    counter <= 0;
+            end
+            else
+                counter <= counter;
+        end
+        case(counter)
+        // Q3 Q2 Q1 Q0 
+        4'b0000:light_state<=4'b0001; 
+        4'b0001:light_state<=4'b0011; 
+        4'b0010:light_state<=4'b0111; 
+        4'b0011:light_state<=4'b1111; 
+        4'b0100:light_state<=4'b0111; 
+        4'b0101:light_state<=4'b0011; 
+        4'b0110:light_state<=4'b0001; 
+        4'b0111:light_state<=4'b0000; 
+        4'b1000:light_state<=4'b1111; 
+        4'b1001:light_state<=4'b0000; 
+        4'b1010:light_state<=4'b1111; 
+        4'b1011:light_state<=4'b0000;
+        endcase
+    end
+    assign outseg = light_state;
+endmodule

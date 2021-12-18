@@ -1,0 +1,15 @@
+set_property PACKAGE_PIN P5 [get_ports a];
+set_property PACKAGE_PIN P4 [get_ports b];
+set_property PACKAGE_PIN P3 [get_ports c];
+set_property PACKAGE_PIN R17 [get_ports d];
+set_property PACKAGE_PIN R1 [get_ports sel];
+set_property PACKAGE_PIN F6 [get_ports out];
+set_property PACKAGE_PIN G4 [get_ports out_inv];
+set_property IOSTANDARD LVCMOS33 [get_ports a];
+set_property IOSTANDARD LVCMOS33 [get_ports b];
+set_property IOSTANDARD LVCMOS33 [get_ports c];
+set_property IOSTANDARD LVCMOS33 [get_ports d];
+set_property IOSTANDARD LVCMOS33 [get_ports sel];
+set_property IOSTANDARD LVCMOS33 [get_ports out];
+set_property IOSTANDARD LVCMOS33 [get_ports out_inv];
+set_property BITSTREAM.CONFIG.UNUSEDPIN PULLNONE [current_design];

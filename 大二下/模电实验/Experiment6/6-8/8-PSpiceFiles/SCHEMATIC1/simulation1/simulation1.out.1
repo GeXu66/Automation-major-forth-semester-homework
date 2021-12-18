@@ -1,0 +1,46 @@
+
+**** 05/16/21 15:16:05 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-simulation1"  [ D:\EXPERIMENT6\6-8\8-PSpiceFiles\SCHEMATIC1\simulation1.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "simulation1.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Cadence\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 10ms 1us 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 8
+X_U1         N09099 N08861 +15V -15V N08911 LM741
+V_V3         0 -15V 15Vdc
+V_V2         +15V 0 15Vdc
+R_R1         0 N09099  1k TC=0,0 
+R_R2         N09051 N08861  1k TC=0,0 
+V_V4         N09051 0  
++SIN o 1 1k 0 0 0
+-----$
+ERROR(ORPSIM-16492): Missing value
+
+**** RESUMING simulation1.cir ****
+.END
+

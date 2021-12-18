@@ -1,0 +1,13 @@
+# depslib dependency file v1.0
+1619493164 source:c:\users\lu\desktop\exp3\main.c
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1619701660 source:d:\作业们\数据结构\3\exp3\main.c
+	<math.h>
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+

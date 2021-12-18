@@ -1,0 +1,10 @@
+* source 6
+R_R2         N07091 N06956  10k TC=0,0 
+R_R3         0 N06804  10k TC=0,0 
+V_V2         +15V 0 15Vdc
+V_V3         0 -15V 15Vdc
+X_U1         N06804 N06956 +15V -15V N06674 LM741
+C_C1         N06956 N06674  0.1u IC=0 TC=0,0 
+R_R4         N06956 N06674  100k TC=0,0 
+V_V4         N07091 0  
++PULSE -1 1 0 0.1ns 0.1ns 0.5ms 1ms

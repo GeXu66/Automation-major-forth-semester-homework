@@ -1,0 +1,12 @@
+# depslib dependency file v1.0
+1615900580 source:e:\1_190320517\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+
+1615907662 source:d:\作业们\数据结构\1_190320517\main.c
+	<stdio.h>
+	<string.h>
+	<stdlib.h>
+	<ctype.h>
+

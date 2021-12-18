@@ -1,0 +1,212 @@
+
+**** 06/02/21 17:55:50 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-cons"  [ D:\Experiment7\7-6\7-6-PSpiceFiles\SCHEMATIC1\cons.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "cons.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Cadence\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 55ms 40ms 10us 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 7-6
+X_U1         N07137 0 +15V -15V N070894 LM741
+C_C1         N07323 N07405  0.01u  TC=0,0 
+D_D4         N07181 N072431 D1N4734 
+X_U2         0 N07323 +15V -15V N07405 LM741
+R_R3         N07137 N07181  100k TC=0,0 
+R_R1         N070894 N07181  2k TC=0,0 
+R_R5         N07137 N07405  33k TC=0,0 
+V_V3         0 -15V 15Vdc
+V_V2         +15V 0 15Vdc
+D_D3         0 N072431 D1N4734 
+R_R4         N07181 N07323  75k TC=0,0 
+
+**** RESUMING cons.cir ****
+.END
+
+**** 06/02/21 17:55:50 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-cons"  [ D:\Experiment7\7-6\7-6-PSpiceFiles\SCHEMATIC1\cons.sim ] 
+
+
+ ****     Diode MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               D1N4734         X_U1.x_lm741.dx X_U1.x_lm741.dy X_U2.x_lm741.dx 
+          IS    1.085000E-15  800.000000E-18  800.000000E-18  800.000000E-18 
+         ISR    2.811000E-09                                                 
+          BV    5.6                                                          
+         IBV     .37157                                                      
+         NBV     .64726                                                      
+        IBVL    1.000000E-03                                                 
+        NBVL    6.5761                                                       
+          RS     .7945          1               1.000000E-03    1            
+         CJO  157.000000E-12                   10.000000E-12                 
+          VJ     .75                                                         
+           M     .2966                                                       
+        TBV1  267.860000E-06                                                 
+
+
+               X_U2.x_lm741.dy 
+          IS  800.000000E-18 
+          RS    1.000000E-03 
+         CJO   10.000000E-12 
+
+
+**** 06/02/21 17:55:50 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-cons"  [ D:\Experiment7\7-6\7-6-PSpiceFiles\SCHEMATIC1\cons.sim ] 
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               X_U1.x_lm741.qx X_U2.x_lm741.qx 
+               NPN             NPN             
+       LEVEL    1               1            
+          IS  800.000000E-18  800.000000E-18 
+          BF   93.75           93.75         
+          NF    1               1            
+          BR    1               1            
+          NR    1               1            
+         ISS    0               0            
+          RE    0               0            
+          RC    0               0            
+         CJE    0               0            
+         VJE     .75             .75         
+         CJC    0               0            
+         VJC     .75             .75         
+         MJC     .33             .33         
+        XCJC    1               1            
+         CJS    0               0            
+         VJS     .75             .75         
+          KF    0               0            
+          AF    1               1            
+          CN    2.42            2.42         
+           D     .87             .87         
+
+
+**** 06/02/21 17:55:50 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-cons"  [ D:\Experiment7\7-6\7-6-PSpiceFiles\SCHEMATIC1\cons.sim ] 
+
+
+ ****     INITIAL TRANSIENT SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+( +15V)   15.0000  ( -15V)  -15.0000  (N07137)-19.22E-06 (N07181)     .0060     
+
+(N07323) 19.25E-06 (N07405) 624.8E-06 (N070894)     .0063                       
+
+(N072431)     .0031                   (X_U1.x_lm741.6)-594.3E-09                
+
+(X_U1.x_lm741.7)     .0063            (X_U1.x_lm741.8)     .0063                
+
+(X_U1.x_lm741.9)    0.0000            (X_U2.x_lm741.6)-59.44E-09                
+
+(X_U2.x_lm741.7) 625.8E-06            (X_U2.x_lm741.8) 625.8E-06                
+
+(X_U2.x_lm741.9)    0.0000            (X_U1.x_lm741.10)    -.6077               
+
+(X_U1.x_lm741.11)   14.9600           (X_U1.x_lm741.12)   14.9600               
+
+(X_U1.x_lm741.13)    -.5938           (X_U1.x_lm741.14)    -.5938               
+
+(X_U1.x_lm741.53)   14.0000           (X_U1.x_lm741.54)  -14.0000               
+
+(X_U1.x_lm741.90) 140.1E-06           (X_U1.x_lm741.91)   40.0000               
+
+(X_U1.x_lm741.92)  -40.0000           (X_U1.x_lm741.99)    0.0000               
+
+(X_U2.x_lm741.10)    -.6077           (X_U2.x_lm741.11)   14.9600               
+
+(X_U2.x_lm741.12)   14.9600           (X_U2.x_lm741.13)    -.5938               
+
+(X_U2.x_lm741.14)    -.5938           (X_U2.x_lm741.53)   14.0000               
+
+(X_U2.x_lm741.54)  -14.0000           (X_U2.x_lm741.90) 19.52E-06               
+
+(X_U2.x_lm741.91)   40.0000           (X_U2.x_lm741.92)  -40.0000               
+
+(X_U2.x_lm741.99)    0.0000           
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V3        -3.334E-03
+    V_V2        -3.334E-03
+    X_U1.x_lm741.vb  -5.943E-12
+    X_U1.x_lm741.vc   1.399E-11
+    X_U1.x_lm741.ve   1.456E-11
+    X_U1.x_lm741.vlim   1.401E-07
+    X_U1.x_lm741.vlp  -4.000E-11
+    X_U1.x_lm741.vln  -4.000E-11
+    X_U2.x_lm741.vb  -5.944E-13
+    X_U2.x_lm741.vc   1.400E-11
+    X_U2.x_lm741.ve   1.455E-11
+    X_U2.x_lm741.vlim   1.952E-08
+    X_U2.x_lm741.vlp  -4.000E-11
+    X_U2.x_lm741.vln  -4.000E-11
+
+    TOTAL POWER DISSIPATION   1.00E-01  WATTS
+
+
+
+          JOB CONCLUDED
+
+**** 06/02/21 17:55:50 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-cons"  [ D:\Experiment7\7-6\7-6-PSpiceFiles\SCHEMATIC1\cons.sim ] 
+
+
+ ****     JOB STATISTICS SUMMARY
+
+
+******************************************************************************
+
+
+
+  Total job time (using Solver 1)   =         .47
+

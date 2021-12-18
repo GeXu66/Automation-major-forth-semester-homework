@@ -1,0 +1,53 @@
+
+**** 06/02/21 15:13:09 ***** PSpice 16.6.0 (October 2012) ***** ID# 0 ********
+
+ ** Profile: "SCHEMATIC1-cons"  [ D:\EXPERIMENT7\7-2\7-2-PSpiceFiles\SCHEMATIC1\cons.sim ] 
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+** Creating circuit file "cons.cir" 
+** WARNING: THIS AUTOMATICALLY GENERATED FILE MAY BE OVERWRITTEN BY SUBSEQUENT SIMULATIONS
+
+*Libraries: 
+* Profile Libraries :
+* Local Libraries :
+* From [PSPICE NETLIST] section of D:\Cadence\Cadence\SPB_Data\cdssetup\OrCAD_PSpice/16.6.0/PSpice.ini file:
+.lib "nom.lib" 
+
+*Analysis directives: 
+.TRAN  0 100ms 0 
+.OPTIONS ADVCONV
+.PROBE64 V(alias(*)) I(alias(*)) W(alias(*)) D(alias(*)) NOISE(alias(*)) 
+.INC "..\SCHEMATIC1.net" 
+
+
+
+**** INCLUDING SCHEMATIC1.net ****
+* source 7-2
+R_R1         N042374 N04393  2k TC=0,0 
+X_U1         N04285 N04439 +15V -15V N042374 LM741
+C_C1         0 N04439  0.1u  TC=0,0 
+R_R4         0 N04285  100k TC=0,0 
+D_D4         N04393 N044871 D1N4734 
+V_V2         +15V 0 15Vdc
+V_V3         0 -15V 15Vdc
+R_R2         N04439 N04754  2k TC=0,0 
+D_D3         0 N044871 D1N4734 
+R_R3         N04285 N04393  100k TC=0,0 
+D_D5         N04754 N046771 D1N4007 
+D_D6         N046930 N04754 D1N4007 
+R_R5         N046771 N04393  8k TC=0,0 
+R_R6         N046930 N04393  0 TC=0,0 
+-----------------------------$
+ERROR(ORPSIM-16144): Value may not be 0
+
+**** RESUMING cons.cir ****
+.END
+
